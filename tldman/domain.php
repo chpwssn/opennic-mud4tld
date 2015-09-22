@@ -163,9 +163,9 @@ function register_domain($domain, $ns1, $ns2, $ns1_ip, $ns2_ip)
 	}
 	if( (strlen($ns1_ip)>7) && (strlen($ns2_ip)>7))
 	{
-		$URL=$tld_svr."?cmd=register&user=".$user."&userkey=".$userkey."&tld=".$tld."&domain=".$domain."&userid=".$userid."&ns1=".$ns1."&ns2=".$ns2."&ns1_ip=".$ns1_ip."&ns2_ip=".$ns2_ip;
+		$URL=$tld_svr."?cmd=register&user=".$user."&userkey=".$userkey."&tld=".$TLD."&domain=".$domain."&userid=".$userid."&ns1=".$ns1."&ns2=".$ns2."&ns1_ip=".$ns1_ip."&ns2_ip=".$ns2_ip;
 	} else {
-		$URL=$tld_svr."?cmd=register&user=".$user."&userkey=".$userkey."&tld=".$tld."&domain=".$domain."&userid=".$userid."&ns1=".$ns1."&ns2=".$ns2;
+		$URL=$tld_svr."?cmd=register&user=".$user."&userkey=".$userkey."&tld=".$TLD."&domain=".$domain."&userid=".$userid."&ns1=".$ns1."&ns2=".$ns2;
 	}
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $URL);
